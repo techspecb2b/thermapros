@@ -47,10 +47,41 @@
         @keyframes bgPulse { 0% { transform: translate(0, 0) rotate(0deg); } 100% { transform: translate(-5%, -5%) rotate(3deg); } }
         
         .floating-particles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; overflow: hidden; }
-        .particle { position: absolute; border-radius: 50%; animation: float linear infinite; }
-        .particle.red { background: var(--accent-heat); box-shadow: 0 0 20px 5px rgba(220, 38, 38, 0.8), 0 0 40px 10px rgba(220, 38, 38, 0.4); }
-        .particle.blue { background: var(--accent-cool); box-shadow: 0 0 20px 5px rgba(37, 99, 235, 0.8), 0 0 40px 10px rgba(37, 99, 235, 0.4); }
-        @keyframes float { 0% { transform: translateY(100vh) rotate(0deg); opacity: 0; } 5% { opacity: 1; } 95% { opacity: 1; } 100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; } }
+        .particle { position: absolute; animation: float linear infinite; opacity: 0.4; }
+        .particle svg { width: 100%; height: 100%; }
+        .particle.red { color: #dc2626; filter: drop-shadow(0 0 10px rgba(220, 38, 38, 0.8)) drop-shadow(0 0 20px rgba(220, 38, 38, 0.4)); }
+        .particle.blue { color: #2563eb; filter: drop-shadow(0 0 10px rgba(37, 99, 235, 0.8)) drop-shadow(0 0 20px rgba(37, 99, 235, 0.4)); }
+        @keyframes float { 0% { transform: translateY(100vh) rotate(0deg); } 100% { transform: translateY(-100vh) rotate(360deg); } }
+        .particle:nth-child(1) { left: 5%; width: 24px; height: 24px; animation-duration: 25s; animation-delay: -2s; }
+        .particle:nth-child(2) { left: 10%; width: 20px; height: 20px; animation-duration: 20s; animation-delay: -4s; }
+        .particle:nth-child(3) { left: 15%; width: 28px; height: 28px; animation-duration: 28s; animation-delay: -6s; }
+        .particle:nth-child(4) { left: 20%; width: 22px; height: 22px; animation-duration: 22s; animation-delay: -8s; }
+        .particle:nth-child(5) { left: 25%; width: 26px; height: 26px; animation-duration: 30s; animation-delay: -10s; }
+        .particle:nth-child(6) { left: 30%; width: 18px; height: 18px; animation-duration: 18s; animation-delay: -12s; }
+        .particle:nth-child(7) { left: 35%; width: 30px; height: 30px; animation-duration: 26s; animation-delay: -14s; }
+        .particle:nth-child(8) { left: 40%; width: 20px; height: 20px; animation-duration: 21s; animation-delay: -16s; }
+        .particle:nth-child(9) { left: 45%; width: 24px; height: 24px; animation-duration: 24s; animation-delay: -18s; }
+        .particle:nth-child(10) { left: 50%; width: 28px; height: 28px; animation-duration: 27s; animation-delay: -20s; }
+        .particle:nth-child(11) { left: 55%; width: 22px; height: 22px; animation-duration: 23s; animation-delay: -3s; }
+        .particle:nth-child(12) { left: 60%; width: 26px; height: 26px; animation-duration: 29s; animation-delay: -5s; }
+        .particle:nth-child(13) { left: 65%; width: 18px; height: 18px; animation-duration: 19s; animation-delay: -7s; }
+        .particle:nth-child(14) { left: 70%; width: 32px; height: 32px; animation-duration: 32s; animation-delay: -9s; }
+        .particle:nth-child(15) { left: 75%; width: 20px; height: 20px; animation-duration: 20s; animation-delay: -11s; }
+        .particle:nth-child(16) { left: 80%; width: 24px; height: 24px; animation-duration: 25s; animation-delay: -13s; }
+        .particle:nth-child(17) { left: 85%; width: 28px; height: 28px; animation-duration: 28s; animation-delay: -15s; }
+        .particle:nth-child(18) { left: 90%; width: 22px; height: 22px; animation-duration: 22s; animation-delay: -17s; }
+        .particle:nth-child(19) { left: 95%; width: 26px; height: 26px; animation-duration: 26s; animation-delay: -19s; }
+        .particle:nth-child(20) { left: 3%; width: 20px; height: 20px; animation-duration: 21s; animation-delay: -1s; }
+        .particle:nth-child(21) { left: 8%; width: 30px; height: 30px; animation-duration: 30s; animation-delay: -22s; }
+        .particle:nth-child(22) { left: 13%; width: 18px; height: 18px; animation-duration: 17s; animation-delay: -24s; }
+        .particle:nth-child(23) { left: 18%; width: 24px; height: 24px; animation-duration: 24s; animation-delay: -26s; }
+        .particle:nth-child(24) { left: 23%; width: 28px; height: 28px; animation-duration: 28s; animation-delay: -28s; }
+        .particle:nth-child(25) { left: 28%; width: 20px; height: 20px; animation-duration: 19s; animation-delay: -21s; }
+        .particle:nth-child(26) { left: 33%; width: 26px; height: 26px; animation-duration: 25s; animation-delay: -23s; }
+        .particle:nth-child(27) { left: 38%; width: 22px; height: 22px; animation-duration: 22s; animation-delay: -25s; }
+        .particle:nth-child(28) { left: 43%; width: 32px; height: 32px; animation-duration: 31s; animation-delay: -27s; }
+        .particle:nth-child(29) { left: 48%; width: 18px; height: 18px; animation-duration: 18s; animation-delay: -29s; }
+        .particle:nth-child(30) { left: 53%; width: 24px; height: 24px; animation-duration: 24s; animation-delay: -30s; }
 
         .header { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; padding: 16px 0; background: rgba(10, 10, 15, 0.8); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-color); transition: var(--transition-smooth); }
         .header.scrolled { padding: 12px 0; background: rgba(10, 10, 15, 0.95); }
@@ -90,6 +121,9 @@
         .hero-badge i { width: 16px; height: 16px; }
         .hero-title { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; margin-bottom: 24px; animation: fadeInUp 0.6s ease 0.1s forwards; opacity: 0; }
         .hero-title .highlight { background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero-title .highlight-red { color: #dc2626; }
+        .hero-title .highlight-blue { color: #2563eb; }
+        .hero-title .highlight-yellow { color: #eab308; }
         .hero-subtitle { font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 32px; max-width: 540px; animation: fadeInUp 0.6s ease 0.2s forwards; opacity: 0; }
         .hero-guarantee { display: flex; align-items: center; gap: 12px; padding: 16px 24px; background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.3); border-radius: var(--radius-md); margin-bottom: 32px; animation: fadeInUp 0.6s ease 0.3s forwards; opacity: 0; }
         .hero-guarantee i { color: var(--success); width: 24px; height: 24px; }
@@ -113,7 +147,7 @@
         .trust-item { display: flex; align-items: center; gap: 16px; padding: 20px; background: var(--bg-card); border-radius: var(--radius-md); border: 1px solid var(--border-color); transition: var(--transition-fast); }
         .trust-item:hover { border-color: var(--accent-heat); transform: translateY(-4px); }
         .trust-icon { width: 48px; height: 48px; background: rgba(220, 38, 38, 0.15); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: var(--accent-heat); flex-shrink: 0; }
-        .trust-icon i { width: 24px; height: 24px; }
+        .trust-icon svg { width: 24px; height: 24px; }
         .trust-text { font-weight: 600; font-size: 0.95rem; }
 
         .promo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -133,13 +167,13 @@
         .service-card:hover { transform: translateY(-8px); border-color: var(--accent-heat); }
         .service-card:hover::after { height: 100%; }
         .service-icon { width: 80px; height: 80px; margin: 0 auto 24px; background: rgba(220, 38, 38, 0.15); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; }
-        .service-icon i { width: 40px; height: 40px; color: var(--accent-heat); }
+        .service-icon svg { width: 40px; height: 40px; color: var(--accent-heat); }
         .service-card:nth-child(2) .service-icon { background: rgba(37, 99, 235, 0.15); }
-        .service-card:nth-child(2) .service-icon i { color: var(--accent-cool); }
+        .service-card:nth-child(2) .service-icon svg { color: var(--accent-cool); }
         .service-card:nth-child(3) .service-icon { background: rgba(34, 197, 94, 0.15); }
-        .service-card:nth-child(3) .service-icon i { color: var(--success); }
-        .service-card:nth-child(4) .service-icon { background: rgba(168, 85, 247, 0.15); }
-        .service-card:nth-child(4) .service-icon i { color: #a855f7; }
+        .service-card:nth-child(3) .service-icon svg { color: var(--success); }
+        .service-card:nth-child(4) .service-icon { background: rgba(234, 179, 8, 0.15); }
+        .service-card:nth-child(4) .service-icon svg { color: #eab308; }
         .service-title { font-size: 1.25rem; margin-bottom: 12px; position: relative; z-index: 1; }
         .service-desc { color: var(--text-secondary); font-size: 0.95rem; position: relative; z-index: 1; }
 
@@ -149,7 +183,7 @@
         .why-item { display: flex; gap: 20px; padding: 24px; background: var(--bg-card); border-radius: var(--radius-md); border: 1px solid var(--border-color); transition: var(--transition-fast); }
         .why-item:hover { border-color: var(--accent-heat); transform: translateX(8px); }
         .why-icon { width: 56px; height: 56px; background: rgba(220, 38, 38, 0.15); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-        .why-icon i { width: 28px; height: 28px; color: var(--accent-heat); }
+        .why-icon svg { width: 28px; height: 28px; color: var(--accent-heat); }
         .why-item-title { font-size: 1.1rem; margin-bottom: 8px; }
         .why-item-desc { color: var(--text-secondary); font-size: 0.95rem; }
         .warranty-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
@@ -172,7 +206,7 @@
         .slider-btn { width: 56px; height: 56px; border-radius: 50%; background: var(--bg-card); border: 1px solid var(--border-color); color: var(--text-primary); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: var(--transition-fast); }
         .slider-btn:hover { background: var(--accent-gradient); border-color: transparent; transform: scale(1.1); }
         .slider-btn:disabled { opacity: 0.3; cursor: not-allowed; transform: none; }
-        .slider-btn i { width: 24px; height: 24px; }
+        .slider-btn svg { width: 24px; height: 24px; }
         .slider-dots { display: flex; justify-content: center; gap: 12px; margin-top: 24px; }
         .slider-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--border-color); cursor: pointer; transition: var(--transition-fast); }
         .slider-dot.active { background: var(--accent-heat); box-shadow: 0 0 10px var(--accent-heat-glow); transform: scale(1.3); }
@@ -221,7 +255,37 @@
 </head>
 <body>
     <div class="bg-animation"></div>
-    <div class="floating-particles" id="particles"></div>
+    <div class="floating-particles">
+        <div class="particle red"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div>
+        <div class="particle blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" x2="22" y1="12" y2="12"/><line x1="12" x2="12" y1="2" y2="22"/><path d="m20 16-4-4 4-4"/><path d="m4 8 4 4-4 4"/><path d="m16 4-4 4-4-4"/><path d="m8 20 4-4 4 4"/></svg></div>
+        <div class="particle red"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div>
+        <div class="particle blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/></svg></div>
+        <div class="particle red"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/></svg></div>
+        <div class="particle blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" x2="22" y1="12" y2="12"/><line x1="12" x2="12" y1="2" y2="22"/><path d="m20 16-4-4 4-4"/><path d="m4 8 4 4-4 4"/><path d="m16 4-4 4-4-4"/><path d="m8 20 4-4 4 4"/></svg></div>
+        <div class="particle red"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div>
+        <div class="particle blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/></svg></div>
+        <div class="particle red"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/></svg></div>
+        <div class="particle blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" x2="22" y1="12" y2="12"/><line x1="12" x2="12" y1="2" y2="22"/><path d="m20 16-4-4 4-4"/><path d="m4 8 4 4-4 4"/><path d="m16 4-4 4-4-4"/><path d="m8 20 4-4 4 4"/></svg></div>
+        <div class="particle red"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div>
+        <div class="particle blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/></svg></div>
+        <div class="particle red"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div>
+        <div class="particle blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" x2="22" y1="12" y2="12"/><line x1="12" x2="12" y1="2" y2="22"/><path d="m20 16-4-4 4-4"/><path d="m4 8 4 4-4 4"/><path d="m16 4-4 4-4-4"/><path d="m8 20 4-4 4 4"/></svg></div>
+        <div class="particle red"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/></svg></div>
+        <div class="particle blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/></svg></div>
+        <div class="particle red"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div>
+        <div class="particle blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" x2="22" y1="12" y2="12"/><line x1="12" x2="12" y1="2" y2="22"/><path d="m20 16-4-4 4-4"/><path d="m4 8 4 4-4 4"/><path d="m16 4-4 4-4-4"/><path d="m8 20 4-4 4 4"/></svg></div>
+        <div class="particle red"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/></svg></div>
+        <div class="particle blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/></svg></div>
+        <div class="particle red"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div>
+        <div class="particle blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" x2="22" y1="12" y2="12"/><line x1="12" x2="12" y1="2" y2="22"/><path d="m20 16-4-4 4-4"/><path d="m4 8 4 4-4 4"/><path d="m16 4-4 4-4-4"/><path d="m8 20 4-4 4 4"/></svg></div>
+        <div class="particle red"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div>
+        <div class="particle blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/></svg></div>
+        <div class="particle red"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/></svg></div>
+        <div class="particle blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" x2="22" y1="12" y2="12"/><line x1="12" x2="12" y1="2" y2="22"/><path d="m20 16-4-4 4-4"/><path d="m4 8 4 4-4 4"/><path d="m16 4-4 4-4-4"/><path d="m8 20 4-4 4 4"/></svg></div>
+        <div class="particle red"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div>
+        <div class="particle blue"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/></svg></div>
+        <div class="particle red"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/></svg></div>
+    </div>
 
     <header class="header" id="header">
         <div class="container">
@@ -236,9 +300,9 @@
                     <a href="contact.html" class="nav-link">Contact</a>
                 </nav>
                 <div class="header-actions">
-                    <a href="tel:318-469-7799" class="phone-btn"><i data-lucide="phone"></i> 318-469-7799</a>
-                    <a href="contact.html" class="cta-btn"><i data-lucide="calendar"></i> Schedule Service</a>
-                    <button class="mobile-menu-btn" id="menuBtn"><i data-lucide="menu" style="width: 28px; height: 28px;"></i></button>
+                    <a href="tel:318-469-7799" class="phone-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 318-469-7799</a>
+                    <a href="contact.html" class="cta-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg> Schedule Service</a>
+                    <button class="mobile-menu-btn" id="menuBtn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:28px;height:28px;"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg></button>
                 </div>
             </div>
         </div>
@@ -250,7 +314,7 @@
             <a href="services.html" class="mobile-nav-link">Services</a>
             <a href="about.html" class="mobile-nav-link">About</a>
             <a href="contact.html" class="mobile-nav-link">Contact</a>
-            <a href="tel:318-469-7799" class="cta-btn" style="margin-top: 20px; justify-content: center;"><i data-lucide="phone"></i> Call 318-469-7799</a>
+            <a href="tel:318-469-7799" class="cta-btn" style="margin-top: 20px; justify-content: center;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call 318-469-7799</a>
         </nav>
     </div>
 
@@ -258,13 +322,13 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <div class="hero-badge"><i data-lucide="shield-check"></i> Licensed & Insured Technicians</div>
-                    <h1 class="hero-title">Expert <span class="highlight">HVAC, Refrigeration & Electrical</span> Services in the ArkLaTex</h1>
+                    <div class="hero-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg> Licensed & Insured Technicians</div>
+                    <h1 class="hero-title">Expert <span class="highlight-red">HVAC,</span> <span class="highlight-blue">Refrigeration</span> & <span class="highlight-yellow">Electrical</span> Services in the ArkLaTex</h1>
                     <p class="hero-subtitle">From precision installations to emergency repairs, ThermaPros delivers unmatched quality with industry-leading warranties. Serving Mooringsport, LA and the surrounding region.</p>
-                    <div class="hero-guarantee"><i data-lucide="badge-check"></i><span>100% Satisfaction Guaranteed — Fixed Right or We Make It Right!</span></div>
+                    <div class="hero-guarantee"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:24px;height:24px;flex-shrink:0;"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg><span>100% Satisfaction Guaranteed — Fixed Right or We Make It Right!</span></div>
                     <div class="hero-buttons">
-                        <a href="contact.html" class="cta-btn" style="padding: 16px 32px; font-size: 1.05rem;"><i data-lucide="calendar-check"></i> Schedule Service</a>
-                        <a href="tel:318-469-7799" class="btn-secondary"><i data-lucide="phone-call"></i> 318-469-7799</a>
+                        <a href="contact.html" class="cta-btn" style="padding: 16px 32px; font-size: 1.05rem;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="m9 16 2 2 4-4"/></svg> Schedule Service</a>
+                        <a href="tel:318-469-7799" class="btn-secondary"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/><path d="M14.05 2a9 9 0 0 1 8 7.94"/><path d="M14.05 6A5 5 0 0 1 18 10"/></svg> 318-469-7799</a>
                     </div>
                     <div class="hero-stats">
                         <div class="stat-item"><div class="stat-value">5 Year</div><div class="stat-label">Labor Warranty</div></div>
@@ -284,10 +348,10 @@
     <section class="trust-strip">
         <div class="container">
             <div class="trust-items">
-                <div class="trust-item"><div class="trust-icon"><i data-lucide="badge-dollar-sign"></i></div><span class="trust-text">Free Service Call With Repair</span></div>
-                <div class="trust-item"><div class="trust-icon"><i data-lucide="percent"></i></div><span class="trust-text">0% Interest Financing Available</span></div>
-                <div class="trust-item"><div class="trust-icon"><i data-lucide="clock"></i></div><span class="trust-text">Same Day Service Available</span></div>
-                <div class="trust-item"><div class="trust-icon"><i data-lucide="award"></i></div><span class="trust-text">Industry-Leading Warranties</span></div>
+                <div class="trust-item"><div class="trust-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/><path d="M14.05 2a9 9 0 0 1 8 7.94"/><path d="M14.05 6A5 5 0 0 1 18 10"/></svg></div><span class="trust-text">Free Service Call With Repair</span></div>
+                <div class="trust-item"><div class="trust-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" x2="5" y1="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></div><span class="trust-text">0% Interest Financing Available</span></div>
+                <div class="trust-item"><div class="trust-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><span class="trust-text">Same Day Service Available</span></div>
+                <div class="trust-item"><div class="trust-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg></div><span class="trust-text">Industry-Leading Warranties</span></div>
             </div>
         </div>
     </section>
@@ -295,7 +359,7 @@
     <section class="section" id="promotions">
         <div class="container">
             <div class="section-header">
-                <div class="section-badge"><i data-lucide="sparkles"></i> Limited Time Offers</div>
+                <div class="section-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg> Limited Time Offers</div>
                 <h2 class="section-title">Current Promotions</h2>
                 <p class="section-subtitle">Take advantage of our special offers and save on your home comfort needs.</p>
             </div>
@@ -328,18 +392,18 @@
     <section class="section section-dark">
         <div class="container">
             <div class="section-header">
-                <div class="section-badge"><i data-lucide="wrench"></i> What We Do</div>
+                <div class="section-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg> What We Do</div>
                 <h2 class="section-title">Our Services</h2>
                 <p class="section-subtitle">Comprehensive HVAC, refrigeration, and electrical solutions for your home and business.</p>
             </div>
             <div class="services-grid">
-                <div class="service-card"><div class="service-icon"><i data-lucide="thermometer-sun"></i></div><h3 class="service-title">Heating</h3><p class="service-desc">Expert furnace and heating system installation, repair, and maintenance.</p></div>
-                <div class="service-card"><div class="service-icon"><i data-lucide="snowflake"></i></div><h3 class="service-title">Air Conditioning</h3><p class="service-desc">Professional AC services including installation, repairs, and tune-ups.</p></div>
-                <div class="service-card"><div class="service-icon"><i data-lucide="refrigerator"></i></div><h3 class="service-title">Refrigeration</h3><p class="service-desc">Commercial and residential refrigeration services for peak efficiency.</p></div>
-                <div class="service-card"><div class="service-icon"><i data-lucide="zap"></i></div><h3 class="service-title">Electrical</h3><p class="service-desc">Complete electrical services from panel upgrades to repairs.</p></div>
+                <div class="service-card"><div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div><h3 class="service-title">Heating</h3><p class="service-desc">Expert furnace and heating system installation, repair, and maintenance.</p></div>
+                <div class="service-card"><div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" x2="22" y1="12" y2="12"/><line x1="12" x2="12" y1="2" y2="22"/><path d="m20 16-4-4 4-4"/><path d="m4 8 4 4-4 4"/><path d="m16 4-4 4-4-4"/><path d="m8 20 4-4 4 4"/></svg></div><h3 class="service-title">Air Conditioning</h3><p class="service-desc">Professional AC services including installation, repairs, and tune-ups.</p></div>
+                <div class="service-card"><div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 6a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6Z"/><path d="M5 10h14"/><path d="M15 7v6"/></svg></div><h3 class="service-title">Refrigeration</h3><p class="service-desc">Commercial and residential refrigeration services for peak efficiency.</p></div>
+                <div class="service-card"><div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><h3 class="service-title">Electrical</h3><p class="service-desc">Complete electrical services from panel upgrades to repairs.</p></div>
             </div>
             <div style="text-align: center; margin-top: 40px;">
-                <a href="services.html" class="cta-btn" style="padding: 16px 32px;"><i data-lucide="arrow-right"></i> View All Services</a>
+                <a href="services.html" class="cta-btn" style="padding: 16px 32px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg> View All Services</a>
             </div>
         </div>
     </section>
@@ -348,13 +412,13 @@
         <div class="container">
             <div class="why-grid">
                 <div class="why-content">
-                    <div class="section-badge red"><i data-lucide="star"></i> The ThermaPros Difference</div>
+                    <div class="section-badge red"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> The ThermaPros Difference</div>
                     <h2 class="section-title">Why Choose ThermaPros?</h2>
                     <p class="section-subtitle" style="max-width: 100%; text-align: left;">We're not just another HVAC company. We're your neighbors, committed to delivering exceptional service with honesty and integrity.</p>
                     <div class="why-list">
-                        <div class="why-item"><div class="why-icon"><i data-lucide="shield-check"></i></div><div><h4 class="why-item-title">Industry-Leading Warranties</h4><p class="why-item-desc">5-year labor warranty on new construction and 18-month warranty on system replacements.</p></div></div>
-                        <div class="why-item"><div class="why-icon"><i data-lucide="ruler"></i></div><div><h4 class="why-item-title">Precision System Design</h4><p class="why-item-desc">Every system is precisely sized and designed for optimal performance and efficiency.</p></div></div>
-                        <div class="why-item"><div class="why-icon"><i data-lucide="badge"></i></div><div><h4 class="why-item-title">Certified Expertise</h4><p class="why-item-desc">Licensed technicians with decades of combined experience.</p></div></div>
+                        <div class="why-item"><div class="why-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg></div><div><h4 class="why-item-title">Industry-Leading Warranties</h4><p class="why-item-desc">5-year labor warranty on new construction and 18-month warranty on system replacements.</p></div></div>
+                        <div class="why-item"><div class="why-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z"/><path d="m14.5 12.5 2-2"/><path d="m11.5 9.5 2-2"/><path d="m8.5 6.5 2-2"/><path d="m17.5 15.5 2-2"/></svg></div><div><h4 class="why-item-title">Precision System Design</h4><p class="why-item-desc">Every system is precisely sized and designed for optimal performance and efficiency.</p></div></div>
+                        <div class="why-item"><div class="why-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg></div><div><h4 class="why-item-title">Certified Expertise</h4><p class="why-item-desc">Licensed technicians with decades of combined experience.</p></div></div>
                     </div>
                 </div>
                 <div class="why-visual">
@@ -371,15 +435,15 @@
     <section class="slider-section" id="sliderSection">
         <div class="container">
             <div class="section-header">
-                <div class="section-badge"><i data-lucide="images"></i> Our Work</div>
-                <h2 class="section-title">Recent Projects</h2>
+                <div class="section-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;"><path d="M18 22H4a2 2 0 0 1-2-2V6"/><path d="m22 13-1.296-1.296a2.41 2.41 0 0 0-3.408 0L11 18"/><circle cx="12" cy="8" r="2"/><rect x="6" y="2" width="16" height="16" rx="2"/></svg> Some of Our Customers</div>
+                <h2 class="section-title">Quality Work, Happy Customers</h2>
                 <p class="section-subtitle">See the quality and craftsmanship we bring to every job.</p>
             </div>
             <div class="slider-wrapper">
                 <div class="slider-track" id="sliderTrack"></div>
                 <div class="slider-controls" id="sliderControls" style="display: none;">
-                    <button class="slider-btn" id="prevBtn"><i data-lucide="chevron-left"></i></button>
-                    <button class="slider-btn" id="nextBtn"><i data-lucide="chevron-right"></i></button>
+                    <button class="slider-btn" id="prevBtn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
+                    <button class="slider-btn" id="nextBtn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
                 </div>
                 <div class="slider-dots" id="sliderDots"></div>
             </div>
@@ -392,8 +456,8 @@
                 <h2 class="section-title">Ready to Get Started?</h2>
                 <p class="section-subtitle" style="margin-bottom: 32px;">Contact us today for a free estimate or to schedule service. Experience the ThermaPros difference.</p>
                 <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-                    <a href="contact.html" class="cta-btn" style="padding: 16px 32px; font-size: 1.05rem;"><i data-lucide="calendar-check"></i> Schedule Service</a>
-                    <a href="tel:318-469-7799" class="btn-secondary"><i data-lucide="phone-call"></i> 318-469-7799</a>
+                    <a href="contact.html" class="cta-btn" style="padding: 16px 32px; font-size: 1.05rem;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="m9 16 2 2 4-4"/></svg> Schedule Service</a>
+                    <a href="tel:318-469-7799" class="btn-secondary"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/><path d="M14.05 2a9 9 0 0 1 8 7.94"/><path d="M14.05 6A5 5 0 0 1 18 10"/></svg> 318-469-7799</a>
                 </div>
             </div>
         </div>
@@ -419,20 +483,6 @@
 
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <script>
-        // Generate particles
-        const particleContainer = document.getElementById('particles');
-        const particleCount = 60;
-        for (let i = 0; i < particleCount; i++) {
-            const particle = document.createElement('div');
-            particle.className = 'particle ' + (i % 2 === 0 ? 'red' : 'blue');
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.width = (Math.random() * 8 + 4) + 'px';
-            particle.style.height = particle.style.width;
-            particle.style.animationDuration = (Math.random() * 20 + 15) + 's';
-            particle.style.animationDelay = (Math.random() * -30) + 's';
-            particleContainer.appendChild(particle);
-        }
-        
         // Wait for Lucide to load
         function initLucide() {
             if (typeof lucide !== 'undefined') {
@@ -454,15 +504,13 @@
         menuBtn.addEventListener('click', () => {
             menuOpen = !menuOpen;
             mobileMenu.classList.toggle('active', menuOpen);
-            menuBtn.innerHTML = menuOpen ? '<i data-lucide="x" style="width: 28px; height: 28px;"></i>' : '<i data-lucide="menu" style="width: 28px; height: 28px;"></i>';
-            if (typeof lucide !== 'undefined') lucide.createIcons();
+            menuBtn.innerHTML = menuOpen ? '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:28px;height:28px;"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>' : '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:28px;height:28px;"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>';
         });
         document.querySelectorAll('.mobile-nav-link').forEach(link => {
             link.addEventListener('click', () => { 
                 menuOpen = false; 
                 mobileMenu.classList.remove('active'); 
-                menuBtn.innerHTML = '<i data-lucide="menu" style="width: 28px; height: 28px;"></i>'; 
-                if (typeof lucide !== 'undefined') lucide.createIcons(); 
+                menuBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:28px;height:28px;"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>'; 
             });
         });
         
